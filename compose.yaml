@@ -1,0 +1,19 @@
+services:
+  webserver:
+    image: brokfeld.de/php:latest
+    restart: unless-stopped
+    user: 1000:100
+    environment:
+      - TZ=Europe/Berlin
+    ports:
+      - 7003:80
+    volumes:
+      - data:/var/www/html
+      # docker cp nextcloud-webserver-1:/usr/local/etc/php /home/bro/php
+      # cp -R /home/bro/php/* /var/lib/docker/volumes/nextcloud_php/_data/
+      - php:/usr/local/etc/php
+
+volumes:
+  data:
+  php:
+  
