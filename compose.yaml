@@ -1,7 +1,7 @@
 services:
   webserver:
     #image: brokfeld.de/php:latest
-    image: php:apache
+    #image: php:apache
     restart: unless-stopped
     user: 1000:100
     environment:
