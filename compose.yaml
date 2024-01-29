@@ -7,7 +7,7 @@ services:
     environment:
       - TZ=Europe/Berlin
     ports:
-      - 7003:80
+      - 7004:80
 #    volumes:
 #      - data:/var/www/html
       # docker cp nextcloud-webserver-1:/usr/local/etc/php /home/bro/php
